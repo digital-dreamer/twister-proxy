@@ -37,7 +37,7 @@ go to your twister-core folder and run twisterd with the following options:
 
 > ./twisterd -daemon -rpcallowip=127.0.0.1 -public_server_mode=1
   
-This will run twister server in background, allow RPC calls, but only form the same computer, and put it in "public server mode", which is designed for this purpose.
+This will run twister server in background, allow RPC calls, but only from the same computer, and put it in "public server mode", which is designed for this purpose.
 
 **5 - run twister-proxy**
 
@@ -112,4 +112,4 @@ If you changed the RPC port, username or password in twister.conf, you need to c
 You probably damaged settings.json when editing it. If you can spot what went wrong, you can correct it, if not, download the default settings.json and redo your customization.
 
 
-If you get stuck, and need some help setting up a public Twister server, you can ask in the issue sction, even if it is not an actual issue with the code.
+If you get stuck, and need some help setting up a public Twister server, you can ask in the issue section, even if it is not an actual issue with the code.
