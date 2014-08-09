@@ -234,7 +234,7 @@ setInterval(function()
 	};
 	if(perIPCounter[ip].forbiddenCalls>=settings.LogAsAttackThreshold.forbiddenCalls)
 	{
-	    console.log("IP "+ip+" tried to send "+perIPCounter[ip].forbiddenCalls+" calls to forbideen functions.");
+	    console.log("IP "+ip+" tried to send "+perIPCounter[ip].forbiddenCalls+" calls to forbidden functions.");
 	};
     }
     

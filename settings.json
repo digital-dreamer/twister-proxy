@@ -2,7 +2,7 @@
     "Server":
     {
 	"ssl_key_file": "insert/path/to/your/server-key-file",
-	"ssl_certificate_file": "insert/path/to/your/ssl-cetrificate",
+	"ssl_certificate_file": "insert/path/to/your/ssl-certificate",
 	"enable_https": false,
 	
 	"https_port": 443,
