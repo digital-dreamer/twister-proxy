@@ -45,6 +45,7 @@ go to the twister-proxy folder and run
 
 > node twister-proxy.js &
 
+(If you use ports lower that 1024 you need to use sudo - sudo node twister-proxy.js &)
 this will launch a public server on default http port 80. If you need to change any settings, you can edit the settings.json file.
   
 If you type your server's URL into a web browser, you should see the twister web application. It is now functional, but if you care about privacy for your users, I highly recommend taking one more step and enabling SSL.
