@@ -49,6 +49,8 @@ var invalidRequestCounter = 0;
 var forbiddenCallCounter = 0;
 var connectionErrorMessageDisplayed = false;
 
+var auth = "Basic " + new Buffer(settings.RPC.user + ":" + settings.RPC.password).toString("base64");
+
 settings.CallLimits.forEach(function(x) {
     maxCallsPerMinute[x.name] = x.maxPerMinute;
     maxCallsPerMinutePerIP[x.name] = x.maxPerMinutePerIP;
@@ -84,6 +86,8 @@ app.get("*", function(request, response)
 	return;
     }
 
+    request.headers.Authorization = auth;
+    
     var webProxy = http.request({host: settings.RPC.host, port: settings.RPC.port, method: request.method, path: request.path, headers: request.headers}, function (proxy_res)
     {
 	proxy_res.pipe(response, {end: true});
@@ -106,6 +110,7 @@ app.post("/", function(request, response)
 {       
     request.rawBody = "";
     request.setEncoding("utf8");
+    request.headers.Authorization = auth;
 
     request.addListener("data", function(chunk)
     {
