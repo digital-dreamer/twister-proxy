@@ -1,65 +1,65 @@
 {
     "Server":
     {
-	"ssl_key_file": "insert/path/to/your/server-key-file",
-	"ssl_certificate_file": "insert/path/to/your/ssl-certificate",
-	"enable_https": false,
-	
-	"https_port": 443,
-	"http_port": 80
+        "ssl_key_file": "insert/path/to/your/server-key-file",
+        "ssl_certificate_file": "insert/path/to/your/ssl-certificate",
+        "enable_https": false,
+        
+        "https_port": 443,
+        "http_port": 80
     },
     
     "RPC": 
     { 
-	"host": "localhost",
-	"port": 28332,
-	"user": "user",
-	"password": "pwd"
+        "host": "localhost",
+        "port": 28332,
+        "user": "user",
+        "password": "pwd"
     },
 
     "CallLimits":
     [
-	{
-	    "name": "getbestblockhash",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "getinfo",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "listwalletusers",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "getblock",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "dhtget",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "listusernamespartial",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	},
-	{
-	    "name": "gettrendinghashtags",
-	    "maxPerMinute": null,
-	    "maxPerMinutePerIP": null
-	}
+        {
+            "name": "getbestblockhash",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "getinfo",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "listwalletusers",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "getblock",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "dhtget",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "listusernamespartial",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        },
+        {
+            "name": "gettrendinghashtags",
+            "maxPerMinute": null,
+            "maxPerMinutePerIP": null
+        }
     ],
     
     "LogAsAttackThreshold":
     {
-	"callsOverLimits": 30,
-	"invalidRequests": 30,
-	"forbiddenCalls": 30
+        "callsOverLimits": 30,
+        "invalidRequests": 30,
+        "forbiddenCalls": 30
     }
 }

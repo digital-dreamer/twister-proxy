@@ -5,19 +5,20 @@
     "author": "digital dreamer <digitaldreamer@email.cz>",
     "dependencies":
     {
-	"express": ">=2.5.x",
-	"cors": "*",
-	"log-timestamp": ">=0.1.1"
+        "express": ">=2.5.x",
+        "cors": "*",
+        "log-timestamp": ">=0.1.1"
     },
-    "repository": {
+    "repository":
+    {
         "type": "git",
         "url": "https://github.com/digital-dreamer/twister-proxy.git"
     },
     "licenses":
     [
-	{
-	    "type": "Apache 2.0",
-	    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-	}
+        {
+            "type": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
     ]
 }
