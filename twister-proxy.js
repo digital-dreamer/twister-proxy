@@ -5,6 +5,7 @@ var express = require("express");
 var console = require("console");
 
 var app = express();
+var cors = require('cors');
 
 try
 {
@@ -72,6 +73,8 @@ CounterInstance = function()
 }
 
 require("log-timestamp");
+
+app.use(cors());
 
 app.get("*", function(request, response)
 {
