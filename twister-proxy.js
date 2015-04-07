@@ -139,7 +139,7 @@ app.post("/", function(request, response)
             invalidRequestCounter++;
             return;
         }
-        if(maxCallsPerMinute[rpcMethod]===undefined)
+        if(maxCallsPerMinute[rpcMethod]===undefined || maxCallsPerMinute[rpcMethod]===0)
         {
             perIPCounter[remoteIP].forbiddenCalls++;
             forbiddenCallCounter++;
