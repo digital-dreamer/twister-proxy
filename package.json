@@ -1,7 +1,7 @@
 {
     "name": "twister-proxy",
     "description": "RPC proxy for running a public server for the Twister P2P microblogging platform.",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "author": "digital dreamer <digitaldreamer@email.cz>",
     "dependencies":
     {
