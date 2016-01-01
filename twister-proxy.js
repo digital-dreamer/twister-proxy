@@ -7,6 +7,15 @@ var console = require("console");
 var app = express();
 var cors = require('cors');
 
+function handlePortAccessError()
+{
+    console.log("Error: Node.js doesn't allow access to ports lower than 1024 in normal user mode.");
+    console.log("   Possible solutions:");
+    console.log("       1 - Edit settings.json and change \"http_port\": 80 to a higher number. It will then run under any user.");
+    console.log("       2 - If you want to use standard HTTP port, run the server as root: sudo node twister-proxy.js &");
+    process.exit(1);
+}
+
 try
 {
     var settings = JSON.parse(fs.readFileSync("settings.json"));
@@ -202,11 +211,10 @@ app.post("/", function(request, response)
 });
 
 if(settings.Server.enable_https)
-{
-    https.createServer(credentials, app).listen(settings.Server.https_port);
-}
+    https.createServer(credentials, app).listen(settings.Server.https_port).on("error", handlePortAccessError);
 
-http.createServer(app).listen(settings.Server.http_port);
+http.createServer(app).listen(settings.Server.http_port).on("error", handlePortAccessError);
+
 
 setInterval(function()
 {
