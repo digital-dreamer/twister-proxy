@@ -265,6 +265,11 @@
             "maxPerMinutePerIP": null
         },
         {
+            "name": "dhtputraw",
+            "maxPerMinute": 0,
+            "maxPerMinutePerIP": null
+        },
+        {
             "name": "newpostmsg",
             "maxPerMinute": 0,
             "maxPerMinutePerIP": null
