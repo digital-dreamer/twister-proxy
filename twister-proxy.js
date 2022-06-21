@@ -59,7 +59,7 @@ var invalidRequestCounter = 0;
 var forbiddenCallCounter = 0;
 var connectionErrorMessageDisplayed = false;
 
-var auth = "Basic " + new Buffer(settings.RPC.user + ":" + settings.RPC.password).toString("base64");
+var auth = "Basic " + Buffer.from(settings.RPC.user + ":" + settings.RPC.password).toString("base64");
 
 settings.CallLimits.forEach(function(x) {
     maxCallsPerMinute[x.name] = x.maxPerMinute;
